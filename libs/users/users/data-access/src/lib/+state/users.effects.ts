@@ -123,8 +123,14 @@ export const loadUser = createEffect(
       switchMap(([, params]) => {
         if (params['id']) {
           return apiService.get<UsersDTO>(`/users/${params['id']}`).pipe(
+            tap((user) => console.log('User data from API:', user)),
             map((user) => usersDTOAdapter.DTOtoEntity(user)),
-            map((userEntity) => UsersActions.loadUserSuccess({ userData: userEntity })),
+            map((userEntity) => 
+              {
+                console.log('users from api', userEntity)
+                return UsersActions.loadUserSuccess({
+              
+              userData: userEntity })}),
             catchError((error) => {
               console.error('Error', error);
               return of(UsersActions.loadUserFailed({ error }));

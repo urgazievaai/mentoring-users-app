@@ -1,0 +1,5 @@
+<div class="container">
+  <ng-container *ngIf="allFolders$ |async as folders">
+    <users-folder-list [folders]="folders"></users-folder-list>
+  </ng-container>
+</div>

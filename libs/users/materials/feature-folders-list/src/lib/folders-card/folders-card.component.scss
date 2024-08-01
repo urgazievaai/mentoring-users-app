@@ -1,0 +1,20 @@
+   .mat-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #e6e3f2;
+    padding: 15px;
+    mat-icon {
+      color: #8f70ff
+    }
+    mat-card-title{
+      font-size: 20px;
+      font-weight: 500;
+      color: #484d58;
+    }
+    mat-card-subtitle {
+      font-size: 15px;
+      font-weight: 300;
+      color: #484d58;
+    }
+  }
