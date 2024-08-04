@@ -17,4 +17,8 @@ export class MaterialsFacade {
   loadFolders() {
     this.store.dispatch(MaterialsAction.loadFolders())
   }
+  deleteFolder(id:number) {
+    this.store.dispatch(MaterialsAction.deleteFolder({ id }))
+   console.log("folders facade delete")
+  }
  }

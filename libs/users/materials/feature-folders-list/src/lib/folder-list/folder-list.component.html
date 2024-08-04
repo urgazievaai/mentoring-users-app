@@ -3,6 +3,7 @@
     <div class="folder-list col-md-2 mb-3" *ngFor="let folder of folders">
       <users-folders-card
       [folder]="folder"
+      (deleteFolder) ="onDeleteFolder(folder)"
       ></users-folders-card>
     </div>
   </div>

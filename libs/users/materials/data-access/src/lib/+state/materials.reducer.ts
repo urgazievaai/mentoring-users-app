@@ -44,6 +44,7 @@ export const materialsFeature = createFeature({
     on(MaterialsActions.deleteFolderSuccess, (state, { id }) =>
       materialsAdapter.removeOne(id, {
         ...state,
+        status: "loaded" as const,
       })
     )
   ),

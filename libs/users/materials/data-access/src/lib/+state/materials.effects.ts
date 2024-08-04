@@ -1,6 +1,6 @@
 import { inject } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
-import { catchError, map, switchMap } from 'rxjs/operators';
+import { catchError, map, switchMap, tap } from 'rxjs/operators';
 import { of } from 'rxjs';
 import * as MaterialsActions from './materials.actions';
 import { ApiService } from '@users/core/http';
@@ -36,10 +36,8 @@ export const deleteFolder = createEffect(
 
     return actions$.pipe(
       ofType(MaterialsActions.deleteFolder),
-
       switchMap(({ id }) =>
-        apiService.delete<void>(`/folders/${id}`).pipe(
-          //при успешном запросе с помощью оператора map мы преобразовываем результат в действие deleteFolderSuccess, и отправим в хранилище для обновления состояния
+        apiService.delete<void>(`/folder/${id}`).pipe(
           map(() => MaterialsActions.deleteFolderSuccess({ id })),
           catchError((error) => {
             console.log('Error', error);

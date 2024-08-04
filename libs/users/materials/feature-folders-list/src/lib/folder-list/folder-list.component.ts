@@ -21,6 +21,7 @@ export class FolderListComponent {
   
   public onDeleteFolder(folder: IFolder) {
     this.deleteFolder.emit(folder);
+    console.log('delete folder list')
   }
 
   public onOpenFolder(id: number) {
