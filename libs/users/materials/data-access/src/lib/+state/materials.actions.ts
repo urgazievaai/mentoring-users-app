@@ -8,3 +8,7 @@ export const loadFoldersFailure = createAction ('[Materials Page] Load Folders F
 export const deleteFolder = createAction('[Materials Page] Delete Folders', props<{id: number}>());
 export const deleteFolderSuccess = createAction('[Materials Page] Delete Folders Success', props<{id: number}>());
 export const deleteFolderFailed = createAction('[Materials Page] Delete Folders Failed', props<{error: any}>());
+
+export const addFolder = createAction('[Materials Page] Add Folders', props<{folderData: IFolder}>());
+export const addFolderSuccess = createAction('[Materials Page] Add Folders Success', props<{folderData: IFolder}>());
+export const addFolderFailed = createAction('[Materials Page] Add Folders Failed', props<{error: any}>());

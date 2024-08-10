@@ -1,0 +1,13 @@
+<div class="add-folder-dialog">
+  <mat-form-field class="add-folder-dialog__form">
+    <mat-label>Создать новую папку</mat-label>
+    <input matInput placeholder="Название папки*" [formControl]="addFolder">
+    <mat-error>Введите название папки</mat-error>
+  </mat-form-field>
+  <div mat-dialog-actions class="add-folder-dialog__actions">
+    <button mat-button class="add-folder-dialog__cancel"  (click)="cancel()">Отмена</button>
+<!-- если поле formControl addFolder.invalid сделай его disabled, например если она пуста -->
+    <button color="primary" aria-label="clear" class="add-folder-dialog__save" [disabled]="addFolder.invalid" (click)="save()">Сохранить</button>
+  </div>
+</div>
+

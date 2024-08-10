@@ -20,7 +20,7 @@ export class FoldersCardComponent {
     return new Date(timestamp)
   }
 
-  onDeleteFolder(event: Event) {
+  onDeleteFolder() {
     this.deleteFolder.emit()
     console.log('delete folder card')
   }

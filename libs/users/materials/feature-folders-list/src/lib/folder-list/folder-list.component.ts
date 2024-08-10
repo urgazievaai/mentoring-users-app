@@ -6,7 +6,7 @@ import { FoldersCardComponent } from "../folders-card/folders-card.component";
 @Component({
   selector: 'users-folder-list',
   standalone: true,
-  imports: [CommonModule, FoldersCardComponent],
+  imports: [CommonModule, FoldersCardComponent ],
   templateUrl: './folder-list.component.html',
   styleUrls: ['./folder-list.component.scss'],
   encapsulation: ViewEncapsulation.Emulated,

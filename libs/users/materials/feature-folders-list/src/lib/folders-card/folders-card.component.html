@@ -1,11 +1,13 @@
 <mat-card 
-class="folder-card-container">
-<mat-card-content class="mat-card-content">
-  <mat-icon>folder</mat-icon>
-  <button class="folder-delete" (click)="onDeleteFolder($event)">
-    <mat-icon>delete</mat-icon>
-  </button>
-  <mat-card-title class="folder-title">{{folder.title}}</mat-card-title>
-  <mat-card-subtitle class="folder-create-date">{{ transformDate(folder.created_at) | date: 'dd/MM/yyyy'}}</mat-card-subtitle>
+class="folder-card">
+<mat-card-content class="folder-card__content">
+  <div class="folder-card__header">
+    <mat-icon>folder</mat-icon>
+    <button class="folder-card__delete" (click)="onDeleteFolder()">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+  <mat-card-title class="folder-card__title">{{folder.title}}</mat-card-title>
+  <mat-card-subtitle class="folder-card__subtitle">{{ transformDate(folder.created_at) | date: 'dd/MM/yyyy'}}</mat-card-subtitle>
 </mat-card-content>
 </mat-card>

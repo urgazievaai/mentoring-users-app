@@ -6,11 +6,12 @@ import { tap } from 'rxjs';
 import { FolderListComponent } from '../folder-list/folder-list.component';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { CoreUiConfirmDialogComponent } from '@users/core/ui';
+import { FoldersAddButtonComponent } from '@materials/feature-folders-create'
 
 @Component({
   selector: 'users-folders-list-container',
   standalone: true,
-  imports: [CommonModule, FolderListComponent],
+  imports: [CommonModule, FolderListComponent, FoldersAddButtonComponent],
   templateUrl: './folders-list-container.component.html',
   styleUrls: ['./folders-list-container.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
